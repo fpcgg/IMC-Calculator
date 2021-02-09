@@ -12,7 +12,7 @@ function localScope() {
     event.preventDefault();
 
     //verificando os campos de input e calculando o IMC
-    verificarString();
+    verificarCampos();
   });
 
   //função para calcular o IMC
@@ -52,8 +52,8 @@ function localScope() {
   }
 
   //função para verficar os valores dos campos de input
-  function verificarString() {
-    if (isNaN(inputPeso.value) === true || isNaN(inputAltura.value) === true) {
+  function verificarCampos() {
+    if (isNaN(inputPeso.value) === true || inputPeso.value === "" || isNaN(inputAltura.value) === true || inputAltura.value === "") {
       alert(
         "Por favor, coloque valores válidos nos campos para efetuar o cálculo."
       );
